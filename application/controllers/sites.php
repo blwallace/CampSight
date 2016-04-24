@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Campsites extends CI_Controller {
+class Sites extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,7 +12,12 @@ class Campsites extends CI_Controller {
 	{
 		$this->load->view('partials/header');
 		$this->load->view('partials/navbar');
-		$this->load->view('campsites');
+		$this->load->view('partials/campsites');
+	}
+
+	public function view($id)
+	{
+		
 	}
 }
 

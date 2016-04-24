@@ -19,7 +19,7 @@
     <link href="/assets/css/shop-item.css" rel="stylesheet">
 
     <!-- jQueryUI CSS -->
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">        
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">        
 
     <!-- Custom Fonts -->
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

@@ -13,6 +13,7 @@ class Main extends CI_Controller {
 		$this->load->view('partials/header');
 		$this->load->view('partials/navbar');
 		$this->load->view('index');
+		$this->load->view('partials/footer');
 	}
 }
 

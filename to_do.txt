@@ -1,0 +1,25 @@
+Application
+	Reservation
+		View available
+		Add reservation
+		Delete Reservation
+		Edit reservation
+	Host Manager
+		View reservations
+		Edit reservations
+		Delete Reservation
+		Edit reservation
+		Change price
+		Remove campground
+	User
+		Login
+		Registration
+	Email
+	Payment
+
+
+Data
+Load campground csv file into database
+
+Manual
+Find better campground source 

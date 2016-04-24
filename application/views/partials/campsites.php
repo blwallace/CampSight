@@ -1,7 +1,5 @@
     <!-- Page Content -->
-<?php 
-foreach($grounds as $ground)
-    {?>    
+   
     <div class="container">
 
         <div class="row">
@@ -27,6 +25,25 @@ foreach($grounds as $ground)
                         <h4><a href="#">Name: <?= $name ?></a>
                         </h4>
                         <p>Ammenities: <?= $ammenities ?></p>
+                        <form action='/campgrounds/reserve' type='POST'>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Start Date</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" id="startdate"></td>
+                                </tr>
+                            </table>                  
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>End Date</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" id="enddate"></td>
+                                </tr>
+                            </table>                    
+                            <button type="submit" class="btn btn-success">Book Site</button>
+                        </form>                        
                     </div>
                     <div class="ratings">
                         <p class="pull-right">3 reviews</p>
@@ -37,8 +54,9 @@ foreach($grounds as $ground)
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star-empty"></span>
                             4.0 stars
-                        </p>
+                        </p>                                         
                     </div>
+
                 </div>
             </div>
             <div class="col-md-3">
@@ -49,24 +67,4 @@ foreach($grounds as $ground)
         </div>
 
     </div>
-    <!-- /.container -->
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-</body>
-
-</html>
