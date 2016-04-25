@@ -10,7 +10,7 @@
 <?php
                     foreach($sites as $site){
 ?>
-                        <a href="<?= $site['name'] ?>" class="list-group-item">Campsite <?= $site['name'] ?></a>
+                        <button class="list-group-item">Campsite <?= $site['name'] ?></button>
 <?php                    }
 ?>                                     
                 </div>

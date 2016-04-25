@@ -5,20 +5,24 @@ class Sites extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->output->enable_profiler();
+		$this->load->model('site');
+		$this->output->enable_profiler();
 	}
 
 	public function index()
 	{
-		$this->load->view('partials/header');
-		$this->load->view('partials/navbar');
-		$this->load->view('partials/campsites');
+		$site = $this->site->get_site($id);
+		$value['json'] = json_encode($site);
+		$this->load->view('json/site',$value);
 	}
 
-	public function view($id)
+	public function single($id)
 	{
-		
+		$site = $this->site->get_site($id)[0];
+		$value['json'] = json_encode($site);
+		$this->load->view('json/site',$value);
 	}
+
 }
 
 //end of main controller

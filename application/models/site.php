@@ -29,9 +29,9 @@ class Site extends CI_Model {
 		return $this->db->query($query,$values);
 	}
 
-	public function get_campground($id)
+	public function get_site($id)
 	{
-		$query = 'SELECT * FROM campgrounds WHERE id=?';
+		$query = 'SELECT * FROM sites WHERE id=?';
 		$values = array($id);
 		return $this->db->query($query,$values) -> result_array();
 	}
