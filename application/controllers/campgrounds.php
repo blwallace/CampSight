@@ -6,7 +6,8 @@ class Campgrounds extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('campground');
-		// $this->output->enable_profiler();
+		$this->load->model('site');
+		$this->output->enable_profiler();
 	}
 
 	public function index()
@@ -23,7 +24,8 @@ class Campgrounds extends CI_Controller {
 
 	public function view($id)
 	{
-		$values = $this->campground->get_campground($id)[0];
+		$values['campground'] = $this->campground->get_campground($id)[0];
+		$values['sites'] = $this->site->get_all_campground($id);
 		$this->load->view('partials/header');
 		$this->load->view('partials/navbar');
 		$this->load->view('partials/script');

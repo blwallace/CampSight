@@ -1,11 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Campground extends CI_Model {
+class Site extends CI_Model {
 
 	public function get_all()
 	{
-		$query = ' SELECT * FROM campgrounds';
+		$query = ' SELECT * FROM sites';
 		return $this->db->query($query) -> result_array();
+	}
+
+	public function get_all_campground($id)
+	{
+		$query = ' SELECT * FROM sites WHERE ? = campground_id';
+		return $this->db->query($query,$id) -> result_array();
 	}
 
 	public function add_campground($name)
@@ -30,11 +36,11 @@ class Campground extends CI_Model {
 		return $this->db->query($query,$values) -> result_array();
 	}
 
-	public function create_campsite($campground,$name)
+	public function add_site($campground_id,$name)
 	{
-		$query = '	INSERT INTO SITES (name)
-					VALUES (?)';
-		$values = array($name);
+		$query = '	INSERT INTO SITES (campground_id,name)
+					VALUES (?,?)';
+		$values = array($campground_id,$name);
 		return $this->db->query($query,$values);
 	}
 

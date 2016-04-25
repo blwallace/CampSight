@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('campground');
+		$this->load->model('site');
 		// $this->output->enable_profiler();
 	}
 
@@ -35,8 +36,15 @@ class Admin extends CI_Controller {
 		$id = $this->input->post('id');
 
 		$this->campground->update_campground($form,$id);
+	}
 
-
+	public function add_site()
+	{
+		for($i = 0; $i < 8; $i++){
+			for($j = 1; $j < 11; $j++){
+				$this->site->add_site($i,$j);
+			}
+		}
 	}
 }
 

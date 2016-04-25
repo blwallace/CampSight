@@ -7,24 +7,21 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">Campsite 1</a>
-                    <a href="#" class="list-group-item">Campsite 2</a>
-                    <a href="#" class="list-group-item">Campsite 3</a>
-                    <a href="#" class="list-group-item">Campsite 1</a>
-                    <a href="#" class="list-group-item">Campsite 2</a>
-                    <a href="#" class="list-group-item">Campsite 3</a>
-                    <a href="#" class="list-group-item">Campsite 1</a>
-                    <a href="#" class="list-group-item">Campsite 2</a>
-                    <a href="#" class="list-group-item">Campsite 3</a>                                        
+<?php
+                    foreach($sites as $site){
+?>
+                        <a href="<?= $site['name'] ?>" class="list-group-item">Campsite <?= $site['name'] ?></a>
+<?php                    }
+?>                                     
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="thumbnail">
                     <div class="caption-full">
                         <h4 class="pull-right">$24.99</h4>
-                        <h4><a href="#">Name: <?= $name ?></a>
+                        <h4><a href="#">Name: <?= $campground['name'] ?></a>
                         </h4>
-                        <p>Ammenities: <?= $ammenities ?></p>
+                        <p>Ammenities: <?= $campground['ammenities'] ?></p>
                         <form action='/campgrounds/reserve' type='POST'>
                             <table class="table table-striped">
                                 <tr>
