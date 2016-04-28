@@ -16,7 +16,16 @@
                             <th>Type</th>
                         </tr>
                         <tr>
-                            <td><input type="text"></td>
+                            <td>                            
+                            <div class="dropdown">
+                              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Campground Type
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Private</a></li>
+                                <li><a href="#">Public</a></li>
+                                <li><a href="#">All</a></li>
+                              </ul>
+                            </div></td>
                         </tr>
                     </table>    
                 </div>

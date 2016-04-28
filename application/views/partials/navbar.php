@@ -19,10 +19,10 @@
                         <a href="/campgrounds">Search</a>
                     </li>                    
                     <li>
-                        <a href="/users"><?= $login ?></a>
+                        <a href="/reservations">Reservations</a>
                     </li>
                     <li>
-                        <a href="/users/logout">Logout</a>
+                        <a href="/users"><?= $login ?></a>
                     </li>
 <!--                     <li>
                         <a href="/admin">Admin</a>
