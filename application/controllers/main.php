@@ -10,8 +10,13 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+		$navbar = array('login'=>'Login');
+		if(isset($this->session->userdata['user_id'])){
+			$navbar['login'] = $this->session->userdata['user_name'];
+		}
+
 		$this->load->view('partials/header');
-		$this->load->view('partials/navbar');
+		$this->load->view('partials/navbar',$navbar);
 		$this->load->view('index');
 		$this->load->view('partials/footer');
 	}

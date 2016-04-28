@@ -1,3 +1,4 @@
+</h5>
 <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -18,17 +19,14 @@
                         <a href="/campgrounds">Search</a>
                     </li>                    
                     <li>
-                        <a href="#">Learn More</a>
+                        <a href="/users"><?= $login ?></a>
                     </li>
                     <li>
-                        <a href="#">Register</a>
+                        <a href="/users/logout">Logout</a>
                     </li>
-                    <li>
-                        <a href="#">Login</a>
-                    </li>
-                    <li>
+<!--                     <li>
                         <a href="/admin">Admin</a>
-                    </li>                    
+                    </li>  -->                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

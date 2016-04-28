@@ -31,3 +31,28 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.site-available{
+    width: 50px;
+    height: 60px;
+    padding:5px;
+    margin:3px;
+    background-color: #009966;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display:inline-block;
+    
+
+}
+
+.site-booked{
+    width: 50px;
+    height: 60px;
+    padding:5px;
+    margin:3px;
+    background-color: #cc3333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display:inline-block;
+
+}
